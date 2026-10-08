@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b1018"/>
+  <circle cx="1030" cy="120" r="260" fill="#143523"/>
+  <text x="90" y="255" fill="#6ee7a0" font-family="monospace" font-size="28">SOFTWARE DEVELOPER</text>
+  <text x="90" y="350" fill="#edf2f7" font-family="sans-serif" font-size="72" font-weight="700">Mark Ardon Bañga</text>
+  <text x="90" y="420" fill="#9ca9bb" font-family="sans-serif" font-size="32">React · TypeScript · Java · Spring Boot</text>
+</svg>

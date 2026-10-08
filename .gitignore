@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.local
+.DS_Store
+.idea/
+.vscode/
+.eslintcache
+.vite/
+.vercel/
+.pnpm-store/
+screenshots/
+.source-assets/

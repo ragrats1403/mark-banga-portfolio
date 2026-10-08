@@ -77,10 +77,31 @@ Put optimized WebP/AVIF project images in `public/projects/`, then use a root-re
 
 ### Vercel
 
-1. Import the GitHub repository into Vercel.
-2. Select the Vite preset.
-3. Use `npm run build` as the build command.
-4. Use `dist` as the output directory.
+Production deployment: <https://mark-banga-portfolio.vercel.app/>
+
+- Framework preset: Vite
+- Install command: `pnpm install`
+- Build command: `pnpm run build`
+- Output directory: `dist`
+- Project root: repository root
+
+Until a GitHub remote is connected, authenticated CLI releases use:
+
+```bash
+pnpm dlx vercel@latest --prod
+```
+
+For automatic deployments, push this repository's `main` branch to GitHub and
+connect that repository in the Vercel project's Git settings. Future pushes to
+`main` will then create production deployments through Vercel's native Git
+integration; other branches can produce preview deployments.
+
+The résumé remains at `public/Mark_Banga_Resume.pdf` and is available in
+production at `/Mark_Banga_Resume.pdf`.
+
+An eventual custom domain can be added under the Vercel project's Domains
+settings. Update the canonical and Open Graph origins in `index.html` after the
+custom domain becomes primary.
 
 ### Cloudflare Pages
 
@@ -93,7 +114,7 @@ No backend, environment variables, redirects, or paid services are required.
 
 ## SEO and sharing
 
-Metadata is in `index.html`. Replace `public/og-placeholder.svg` with a production Open Graph image (ideally a 1200×630 PNG or JPG) and update the `og:image` value. Replace `public/favicon.svg` if a custom mark is preferred. Once a canonical production URL is known, add `og:url` and a canonical `<link>` to `index.html`.
+Metadata is in `index.html`, including the canonical Vercel production origin. `public/og-placeholder.svg` is still a placeholder; replace it with a production Open Graph image (ideally a 1200×630 PNG or JPG) and update the `og:image` value. Replace `public/favicon.svg` if a custom mark is preferred.
 
 ## Architecture
 
